@@ -2,7 +2,7 @@
   "profiles": {
     "KMean": {
       "commandName": "Project",
-      "commandLineArgs": "predict ..\\..\\..\\Data\\Predict\\py.exe"
+      "commandLineArgs": "predict ..\\..\\..\\Data\\test.docx"
     }
   }
 }

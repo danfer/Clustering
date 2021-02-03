@@ -62,7 +62,7 @@ namespace KMean.ML
 
             var predictionEngine = MlContext.Model.CreatePredictionEngine<FileData, FileTypePrediction>(mlModel);
 
-            var fileData = new FileData(File.ReadAllBytes(inputDataFile));
+            var fileData = new FileData(File.ReadAllBytes(inputDataFile), inputDataFile);
 
             var prediction = predictionEngine.Predict(fileData);
 

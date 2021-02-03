@@ -2,6 +2,7 @@
 using Microsoft.ML.Data;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 
@@ -15,8 +16,9 @@ namespace KMean.ML.Objects
 
         public FileData(Span<byte> data, string fileName = null)
         {
+            var fname = Path.GetFileName(fileName);
             // For training purposes only
-            if (!string.IsNullOrEmpty(fileName))
+            if (!string.IsNullOrEmpty(fname))
             {
                 if (fileName.Contains("ps1"))
                 {
